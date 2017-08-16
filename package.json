@@ -12,5 +12,9 @@
     "Test"
   ],
   "author": "Kunal Shantilal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4"
+  }
 }
