@@ -17,44 +17,44 @@ $("#form").submit(function(event){
 		dataType: "json",
 		success: function(DataFromServer){
 			console.log(DataFromServer[0]);
+			console.log(DataFromServer[0].profile_background_image_url);
 			// console.log(DataFromServer[0].followers_count);
 			// console.log(DataFromServer[0].statuses_count);
 
 			
-			
 			$("#twitterName").empty();
 			$("#userImage").empty();
 			$("#Descriptions").empty();
-
 
 			var profileImage = DataFromServer[0].profile_image_url;
 			var screenName = DataFromServer[0].screen_name;
 			var inputName = DataFromServer[0].name;
 			var	description = DataFromServer[0].description;
 			var location = DataFromServer[0].location;
+			var latest = DataFromServer[0].status.text;
 
 			if (searchValue){
 				
-				$("#twitterName").append("<p>"+ inputName+"<p>");
+				$("#twitterName").append("<p>"+inputName+"<p>");
 				$("#userImage").append("<img style='width:300px;' src='"+profileImage+"'>");
 
 				$("#Descriptions").append("<h1 class='name'>"+inputName+"</h1>"+
 					"<strong><p>"+"@"+screenName+"</p></strong>"+
 					"<p>"+location+"</p>"+
-					"<i><p>"+description+"</p></i>"
-
-
-
-
+					"<i><p>"+description+"</p></i>"+
+					"<h3>Latest Tweet</h3>"+
+					"<p>Created at "+DataFromServer[0].status.created_at+"</p>"+
+					"<p>"+latest+"</p>"
 
 					);
+
 			}
 
 			
 			$("#tableBody").empty();
-			var followers = DataFromServer[0].followers_count;
-			var tweets = DataFromServer[0].statuses_count;
-			var likes = DataFromServer[0].favourites_count;
+				var followers = DataFromServer[0].followers_count;
+				var tweets = DataFromServer[0].statuses_count;
+				var likes = DataFromServer[0].favourites_count;
 
 
 				$("#tableBody").append("<tr>"+
@@ -70,26 +70,8 @@ $("#form").submit(function(event){
 			console.log("something went wrong");
 		}
 
-// "<img style='width:100px;' src='"+tweet.user.profile_image_url+"'>"+
-
-
-
-
-
-
 
 	});
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -3,6 +3,7 @@
 	color: #2c3e50;
 	font-size: 30px;
 	font-weight: lighter;
+	padding-left: 5px;
 
 }
 
@@ -11,8 +12,9 @@
 	color: #ecf0f1;
 	background-color: #5cc0fd; 
 	box-shadow: 3px 1px 5px #505354;
+	border-radius: 10px;
 }
-i{
+.fa{
 	color: #5cc0fd;
 }
 
@@ -41,7 +43,7 @@ h3{
 }
 
 .name{
-	color: #419af3;
+	/*color: #419af3;*/
 }
 
 .main-title{
