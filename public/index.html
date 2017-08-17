@@ -2,11 +2,68 @@
 <html>
 <head>
 	<title>Twitter API</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>Twitter API</h1>
+
+	<div class="container">
+		<h1 class="main-title">Twitter API
+			<i class="fa fa-twitter"></i>
+		</h1>
+		
+		<div class="row">
+			<form method="get" action="/" id="form">
+				<div class="form-group col-xs-12">
+					<input id="search" class="form-control" type="text" placeholder="Search...">
+
+				</div>
+				<div class="form-group col-xs-12">
+					<button type="submit" class="btn btm-primary">Search</button>
+				</div>				
+			</form>		
+		</div>
+		<div class="row">
+			<div class="col-xs-12 twitterStats">
+				<h3 class="appendName">Twitter Stats for </h3>
+				<h3 class="appendName" id="twitterName"></h3>
+				<div id="stats"></div>
+				<div class="col-xs-12">
+					<table class="table">
+						<thead class="tableHead">
+							<tr>
+								<td>Followers</td>
+								<td>Tweets</td>
+								<td>Likes</td>
+							</tr>	
+						</thead>
+						<tbody id="tableBody">
+							
+						</tbody>
+					</table>					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<div id="userImage">
+					
+				</div>
+
+			</div>
+			<div class="col-xs-6">
+				<div id="Descriptions"></div>
+				
+			</div>
+
+		</div>
+		
 
 
+
+
+	</div> <!-- container -->
 
 
 
@@ -16,6 +73,7 @@
 
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

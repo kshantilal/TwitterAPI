@@ -1,0 +1,51 @@
+.appendName{
+	display: inline-block;
+	color: #2c3e50;
+	font-size: 30px;
+	font-weight: lighter;
+
+}
+
+.twitterStats{
+	border: 2px solid #bdc3c7;
+	color: #ecf0f1;
+	background-color: #5cc0fd; 
+	box-shadow: 3px 1px 5px #505354;
+}
+i{
+	color: #5cc0fd;
+}
+
+body{
+	color: #2c3e50;
+	background-color: #daecff;
+}
+
+h3{
+	margin-bottom: 0px;
+}
+
+.table{
+	color: #fff;
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+.tableHead{
+	font-size: 20px;
+	font-weight: 400;
+}
+
+#userImage{
+	margin-top: 20px;
+}
+
+.name{
+	color: #419af3;
+}
+
+.main-title{
+	font-size: 80px;
+    font-weight: lighter;
+}
+}
